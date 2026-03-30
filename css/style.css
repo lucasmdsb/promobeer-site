@@ -1197,7 +1197,7 @@ h4 { font-size: clamp(1.25rem, 2vw, 1.5rem); }
    Testimonials Section
    =================================== */
 .section-testimonials {
-    background: var(--color-white);
+    background: var(--color-light);
 }
 
 .testimonials-slider {
@@ -1222,7 +1222,7 @@ h4 { font-size: clamp(1.25rem, 2vw, 1.5rem); }
 .testimonial-card {
     flex: 0 0 100%;
     scroll-snap-align: start;
-    background: var(--color-off-white);
+    background: var(--color-white);
     border-radius: var(--radius-lg);
     padding: var(--space-2xl);
     display: flex;
@@ -1501,11 +1501,11 @@ h4 { font-size: clamp(1.25rem, 2vw, 1.5rem); }
    Como Funciona Section
    =================================== */
 .section-how-it-works {
-    background: var(--color-light);
+    background: var(--color-white);
 }
 
 .step-card {
-    background: var(--color-white);
+    background: var(--color-off-white);
     border-radius: var(--radius-lg);
     box-shadow: var(--shadow-md);
     transition: transform var(--transition-base), box-shadow var(--transition-base);
