@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="PromoBeer - O melhor app para encontrar promoções de bebidas alcoólicas na sua região. Pesquise ofertas em supermercados e lojas de bebidas em tempo real.">
+    <title>PromoBeer | O seu app de promoções de bebidas</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@300;400;500;600;700;800&display=swap" as="style" onload="this.rel='stylesheet'">
+    <noscript><link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"></noscript>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" media="print" onload="this.media='all'">
+</head>
+<body class="theme-mm hero-variant-white">
+    <!-- Header / Navegação -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <a href="#" class="logo">
+                    <span class="logo-text">PROMO<span style="color: var(--color-secondary);">BEER</span></span>
+                </a>
+                
+                <nav class="nav-desktop">
+                    <ul class="nav-menu">
+                        <li class="nav-item"><a href="#sobre">O que é</a></li>
+                        <li class="nav-item"><a href="#funcionalidades">Funcionalidades</a></li>
+                        <li class="nav-item"><a href="#por-que-usar">Por que usar</a></li>
+                        <li class="nav-item"><a href="#cidades">Cidades</a></li>
+                        <li class="nav-item"><a href="#download">Download</a></li>
+                    </ul>
+                </nav>
+
+                <div class="header-actions">
+                    <a href="https://wa.me/5585999026227" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Fale conosco</a>
+                    <button class="mobile-menu-toggle" aria-label="Menu">
+                        <span class="hamburger"></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Menu Mobile -->
+        <nav class="nav-mobile">
+            <ul class="nav-mobile-menu">
+                <li class="nav-mobile-item"><a href="#sobre" class="nav-mobile-link">O que é</a></li>
+                <li class="nav-mobile-item"><a href="#funcionalidades" class="nav-mobile-link">Funcionalidades</a></li>
+                <li class="nav-mobile-item"><a href="#por-que-usar" class="nav-mobile-link">Por que usar</a></li>
+                <li class="nav-mobile-item"><a href="#cidades" class="nav-mobile-link">Cidades</a></li>
+                <li class="nav-mobile-item"><a href="#download" class="nav-mobile-link">Download</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" style="position: relative; height: 100vh; min-height: 600px; overflow: hidden; display: flex; align-items: center; background: #1a1a2e;">
+        <video class="hero-video" playsinline muted loop autoplay preload="auto" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: 0;">
+            <source src="video/promobeer-bg.mp4" type="video/mp4">
+        </video>
+        <div class="hero-overlay" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(to bottom, rgba(26, 26, 46, 0.4) 0%, rgba(26, 26, 46, 0.7) 100%); z-index: 1;"></div>
+        <div class="container" style="position: relative; z-index: 2;">
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    <span class="hero-title-line">Procurar promoções de bebidas</span>
+                    <span class="hero-title-line highlight">ficou no passado</span>
+                </h1>
+                <p class="hero-subtitle">
+                    Com o aplicativo PromoBeer, você tem em mãos o mapa de promoções em tempo real de supermercados e lojas de bebidas da sua cidade. Economize tempo e dinheiro na hora de garantir a gelada.
+                </p>
+                <div class="hero-buttons">
+                    <a href="https://play.google.com/store/apps/details?id=com.promobeerapp.promobeer" target="_blank" class="btn btn-primary btn-lg"><i class="fab fa-google-play"></i> Google Play</a>
+                    <a href="https://apps.apple.com/br/app/promobeer/id1033253442" target="_blank" class="btn btn-outline btn-lg"><i class="fab fa-apple"></i> App Store</a>
+                </div>
+            </div>
+        </div>
+        <div class="hero-scroll">
+            <a href="#sobre" class="scroll-indicator">
+                <span>Conheça mais</span>
+                <i class="fas fa-chevron-down"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- Sobre Section -->
+    <section id="sobre" class="section section-quem-somos">
+        <div class="container">
+            <div class="section-header" style="text-align: center; margin-bottom: var(--space-3xl);">
+                <span class="section-tag">O que é</span>
+                <h2 class="section-title">PromoBeer</h2>
+            </div>
+            <div class="quem-somos-layout" style="display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center;">
+                <div class="quem-somos-content">
+                    <p class="section-description" style="margin: 0; text-align: left; max-width: 100%;">
+                        Procurar promoções de bebidas ficou no passado! O PromoBeer é um aplicativo gratuito que permite pesquisar por promoções de qualquer tipo de bebida alcoólica na sua região de forma fácil e rápida.
+                        <br><br>
+                        Com o nosso app, você tem em mãos o mapa de promoções em todos os estabelecimentos (supermercados e lojas de bebidas) da sua cidade, com contato e endereço completo.
+                    </p>
+                    <div class="quem-somos-stats" style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 2rem; margin-top: 3rem;">
+                        <div class="quem-somos-stat">
+                            <span class="quem-somos-stat-number">+ 200.000</span>
+                            <span class="quem-somos-stat-label">Usuários</span>
+                        </div>
+                        <div class="quem-somos-stat">
+                            <span class="quem-somos-stat-number">+ 80.000</span>
+                            <span class="quem-somos-stat-label">Promoções divulgadas</span>
+                        </div>
+                        <div class="quem-somos-stat">
+                            <span class="quem-somos-stat-number">11</span>
+                            <span class="quem-somos-stat-label">Estados</span>
+                        </div>
+                        <div class="quem-somos-stat">
+                            <span class="quem-somos-stat-number">+2140</span>
+                            <span class="quem-somos-stat-label">Cervejas tomadas</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="quem-somos-image" style="text-align: right;">
+                    <img src="images/home2.png" alt="PromoBeer App Interface" style="max-width: 100%; height: auto; border-radius: var(--radius-lg); filter: drop-shadow(var(--shadow-xl));">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Funcionalidades Section -->
+    <section id="funcionalidades" class="section section-programs">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">O que oferecemos</span>
+                <h2 class="section-title">Funcionalidades</h2>
+                <p class="section-subtitle">TUDO O QUE VOCÊ PRECISA</p>
+                <p class="section-description">
+                    O PromoBeer foi desenhado para ser o seu melhor amigo na hora de economizar.
+                </p>
+            </div>
+
+            <div class="programs-grid">
+                <article class="program-card">
+                    <div class="program-card-icon">
+                        <i class="fas fa-map-marked-alt"></i>
+                    </div>
+                    <h3 class="program-card-title">Mapa de Promoções</h3>
+                    <p class="program-card-age">Veja as ofertas próximas a você no mapa.</p>
+                </article>
+
+                <article class="program-card">
+                    <div class="program-card-icon">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <h3 class="program-card-title">Tempo Real</h3>
+                    <p class="program-card-age">Receba e envie promoções instantaneamente.</p>
+                </article>
+
+                <article class="program-card">
+                    <div class="program-card-icon">
+                        <i class="fas fa-trophy"></i>
+                    </div>
+                    <h3 class="program-card-title">Ranking de Pontos</h3>
+                    <p class="program-card-age">Colabore com a comunidade e ganhe pontos.</p>
+                </article>
+
+                <article class="program-card">
+                    <div class="program-card-icon">
+                        <i class="fas fa-store"></i>
+                    </div>
+                    <h3 class="program-card-title">Dados Completos</h3>
+                    <p class="program-card-age">Endereço e contato de todos os locais.</p>
+                </article>
+
+                <article class="program-card">
+                    <div class="program-card-icon">
+                        <i class="fas fa-comment-dots"></i>
+                    </div>
+                    <h3 class="program-card-title">Feedback</h3>
+                    <p class="program-card-age">Sugira novas regiões e melhorias.</p>
+                </article>
+
+                <article class="program-card">
+                    <div class="program-card-icon">
+                        <i class="fas fa-beer"></i>
+                    </div>
+                    <h3 class="program-card-title">Todas as Bebidas</h3>
+                    <p class="program-card-age">Cervejas, vinhos, destilados e mais.</p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Por que usar Section -->
+    <section id="por-que-usar" class="section section-diferenciais">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Vantagens</span>
+                <h2 class="section-title">Por que usar o PromoBeer?</h2>
+                <p class="section-subtitle">O DIFERENCIAL DO NOSSO APP</p>
+                <p class="section-description">
+                    Não somos apenas um app de descontos, somos uma comunidade focada em ajudar você a celebrar melhor gastando menos.
+                </p>
+            </div>
+
+            <div class="screens-carousel" style="margin-bottom: 4rem; overflow: hidden; position: relative; padding: 2rem 0;">
+                <div class="screens-track" style="display: flex; gap: 2rem; animation: scrollScreens 40s linear infinite; width: max-content;">
+                    <!-- Lista de imagens duplicada para o efeito de loop infinito -->
+                    <img src="images/screens/feed.png" alt="App Screen" style="height: 450px; border-radius: 20px; box-shadow: var(--shadow-lg);">
+                    <img src="images/screens/mapa.png" alt="App Screen" style="height: 450px; border-radius: 20px; box-shadow: var(--shadow-lg);">
+                    <img src="images/screens/promotion.png" alt="App Screen" style="height: 450px; border-radius: 20px; box-shadow: var(--shadow-lg);">
+                    <img src="images/screens/estabelecimento.png" alt="App Screen" style="height: 450px; border-radius: 20px; box-shadow: var(--shadow-lg);">
+                    <img src="images/screens/monitoramento.png" alt="App Screen" style="height: 450px; border-radius: 20px; box-shadow: var(--shadow-lg);">
+                    <img src="images/screens/user.png" alt="App Screen" style="height: 450px; border-radius: 20px; box-shadow: var(--shadow-lg);">
+                    <img src="images/screens/localizador.png" alt="App Screen" style="height: 450px; border-radius: 20px; box-shadow: var(--shadow-lg);">
+                    <img src="images/screens/post.png" alt="App Screen" style="height: 450px; border-radius: 20px; box-shadow: var(--shadow-lg);">
+                    <img src="images/screens/criarmonitoramento.png" alt="App Screen" style="height: 450px; border-radius: 20px; box-shadow: var(--shadow-lg);">
+                    <!-- Duplicados para loop -->
+                    <img src="images/screens/feed.png" alt="App Screen" style="height: 450px; border-radius: 20px; box-shadow: var(--shadow-lg);">
+                    <img src="images/screens/mapa.png" alt="App Screen" style="height: 450px; border-radius: 20px; box-shadow: var(--shadow-lg);">
+                    <img src="images/screens/promotion.png" alt="App Screen" style="height: 450px; border-radius: 20px; box-shadow: var(--shadow-lg);">
+                    <img src="images/screens/estabelecimento.png" alt="App Screen" style="height: 450px; border-radius: 20px; box-shadow: var(--shadow-lg);">
+                </div>
+                <style>
+                    @keyframes scrollScreens {
+                        0% { transform: translateX(0); }
+                        100% { transform: translateX(calc(-450px * 4.5)); } /* Ajuste conforme a largura total */
+                    }
+                    .screens-track:hover { animation-play-state: paused; }
+                </style>
+            </div>
+
+            
+    </section>
+
+    <!-- Cidades Section -->
+    <section id="cidades" class="section section-events">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Onde estamos</span>
+                <h2 class="section-title">Cidades Atendidas</h2>
+                <p class="section-description section-events-intro">
+                    O PromoBeer está em constante expansão para levar as melhores ofertas até você. Atualmente, operamos com força total nas seguintes regiões:
+                </p>
+            </div>
+
+            <div class="cidades-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem; margin-top: 3rem;">
+                <div class="cidade-card" style="text-align: center; padding: 2rem; background: var(--color-white); border-radius: var(--radius-lg); shadow: var(--shadow-md);">
+                    <i class="fas fa-city" style="font-size: 3rem; color: var(--color-secondary); margin-bottom: 1rem;"></i>
+                    <h3 style="font-family: var(--font-display); font-size: 1.5rem;">Fortaleza & Cariri</h3>
+                    <p>Ceará</p>
+                </div>
+                <div class="cidade-card" style="text-align: center; padding: 2rem; background: var(--color-white); border-radius: var(--radius-lg); shadow: var(--shadow-md);">
+                    <i class="fas fa-city" style="font-size: 3rem; color: var(--color-secondary); margin-bottom: 1rem;"></i>
+                    <h3 style="font-family: var(--font-display); font-size: 1.5rem;">Natal</h3>
+                    <p>Rio Grande do Norte</p>
+                </div>
+                <div class="cidade-card" style="text-align: center; padding: 2rem; background: var(--color-white); border-radius: var(--radius-lg); shadow: var(--shadow-md);">
+                    <i class="fas fa-city" style="font-size: 3rem; color: var(--color-secondary); margin-bottom: 1rem;"></i>
+                    <h3 style="font-family: var(--font-display); font-size: 1.5rem;">Recife</h3>
+                    <p>Pernambuco</p>
+                </div>
+                <div class="cidade-card" style="text-align: center; padding: 2rem; background: var(--color-white); border-radius: var(--radius-lg); shadow: var(--shadow-md);">
+                    <i class="fas fa-plus-circle" style="font-size: 3rem; color: var(--color-accent); margin-bottom: 1rem;"></i>
+                    <h3 style="font-family: var(--font-display); font-size: 1.5rem;">Sua Cidade?</h3>
+                    <p>Mande uma sugestão!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Download Section -->
+    <section id="download" class="section section-projetos">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Faça parte</span>
+                <h2 class="section-title">Baixe o App</h2>
+                <p class="section-description">
+                    Junte-se a milhares de usuários e comece a economizar hoje mesmo.
+                </p>
+            </div>
+
+            <div class="news-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
+                <article class="news-card">
+                    <div class="news-card-content" style="text-align: center; padding: 3rem;">
+                        <i class="fab fa-android" style="font-size: 4rem; color: #3DDC84; margin-bottom: 1.5rem;"></i>
+                        <h3 class="news-card-title">Android</h3>
+                        <p class="news-card-excerpt">Disponível na Google Play Store para todos os dispositivos Android.</p>
+                        <a href="https://play.google.com/store/apps/details?id=com.promobeerapp.promobeer" target="_blank" class="btn btn-primary" style="margin-top: 1.5rem;">Baixar agora</a>
+                    </div>
+                </article>
+
+                <article class="news-card">
+                    <div class="news-card-content" style="text-align: center; padding: 3rem;">
+                        <i class="fab fa-apple" style="font-size: 4rem; color: #555; margin-bottom: 1.5rem;"></i>
+                        <h3 class="news-card-title">iOS (iPhone)</h3>
+                        <p class="news-card-excerpt">Disponível na App Store para uma experiência fluida no seu iPhone.</p>
+                        <a href="https://apps.apple.com/br/app/promobeer/id1033253442" target="_blank" class="btn btn-primary" style="margin-top: 1.5rem;">Baixar agora</a>
+                    </div>
+                </article>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="section section-testimonials">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Depoimentos</span>
+                <h2 class="section-title">O que dizem os usuários</h2>
+            </div>
+
+            <div class="testimonials-slider">
+                <div class="testimonials-track">
+                    <article class="testimonial-card">
+                        <div class="testimonial-content">
+                            <div class="testimonial-quote">
+                                <i class="fas fa-quote-left"></i>
+                            </div>
+                            <h3 class="testimonial-title">Indispensável!</h3>
+                            <p class="testimonial-text">O melhor app para quem gosta de uma cerveja gelada e não quer pagar caro. O mapa ajuda muito a encontrar o mercado mais barato no caminho de casa.</p>
+                        </div>
+                        <div class="testimonial-author">
+                            <div class="testimonial-info">
+                                <span class="testimonial-name">João Silva</span>
+                                <span class="testimonial-role">Usuário de Fortaleza</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="testimonial-card">
+                        <div class="testimonial-content">
+                            <div class="testimonial-quote">
+                                <i class="fas fa-quote-left"></i>
+                            </div>
+                            <h3 class="testimonial-title">Comunidade top</h3>
+                            <p class="testimonial-text">Adoro poder enviar as promoções que encontro e ajudar a galera. O sistema de pontos é bem legal e motiva a participar.</p>
+                        </div>
+                        <div class="testimonial-author">
+                            <div class="testimonial-info">
+                                <span class="testimonial-name">Maria Oliveira</span>
+                                <span class="testimonial-role">Usuária de Natal</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="testimonial-card">
+                        <div class="testimonial-content">
+                            <div class="testimonial-quote">
+                                <i class="fas fa-quote-left"></i>
+                            </div>
+                            <h3 class="testimonial-title">Economia real</h3>
+                            <p class="testimonial-text">Finalmente um app que funciona de verdade aqui em Recife. Consigo encontrar as cervejas artesanais que eu gosto com um preço muito mais justo.</p>
+                        </div>
+                        <div class="testimonial-author">
+                            <div class="testimonial-info">
+                                <span class="testimonial-name">Pedro Rocha</span>
+                                <span class="testimonial-role">Usuário de Recife</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="testimonial-card">
+                        <div class="testimonial-content">
+                            <div class="testimonial-quote">
+                                <i class="fas fa-quote-left"></i>
+                            </div>
+                            <h3 class="testimonial-title">Super preciso</h3>
+                            <p class="testimonial-text">O mapa é muito prático. Me poupa um tempão rodando atrás de oferta nos fins de semana para o churrasco com a família.</p>
+                        </div>
+                        <div class="testimonial-author">
+                            <div class="testimonial-info">
+                                <span class="testimonial-name">Ana Costa</span>
+                                <span class="testimonial-role">Usuária de Juazeiro do Norte</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="testimonial-card">
+                        <div class="testimonial-content">
+                            <div class="testimonial-quote">
+                                <i class="fas fa-quote-left"></i>
+                            </div>
+                            <h3 class="testimonial-title">Viciante!</h3>
+                            <p class="testimonial-text">O sistema de ranking é sensacional! Além de economizar, a gente compete pra ver quem acha as melhores ofertas. Recomendo demais.</p>
+                        </div>
+                        <div class="testimonial-author">
+                            <div class="testimonial-info">
+                                <span class="testimonial-name">Lucas Mendes</span>
+                                <span class="testimonial-role">Usuário de Fortaleza</span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="section section-cta-banner">
+        <div class="container">
+            <div class="cta-banner">
+                <div class="cta-banner-content">
+                    <h2 class="cta-banner-title">Pronto para economizar na sua próxima gelada?</h2>
+                    <p class="cta-banner-text">Baixe agora o PromoBeer e junte-se à nossa comunidade de caçadores de ofertas.</p>
+                </div>
+                <div class="cta-banner-actions">
+                    <a href="#download" class="btn btn-light btn-lg">Baixar o App</a>
+                    <a href="https://wa.me/5585999026227" target="_blank" rel="noopener noreferrer" class="btn btn-outline-light btn-lg">
+                        <i class="fab fa-whatsapp"></i> Falar com Suporte
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 3rem; padding: 4rem 0;">
+                <div class="footer-info">
+                    <a href="#" class="logo" style="margin-bottom: 1.5rem; display: inline-block;">
+                        <span class="logo-text" style="color: var(--color-white);">PROMO<span style="color: var(--color-secondary);">BEER</span></span>
+                    </a>
+                    <p style="color: rgba(255,255,255,0.7); margin-bottom: 1.5rem;">
+                        O melhor app de promoções de bebidas alcoólicas na sua região. Economize sempre!
+                    </p>
+                    <div class="social-links">
+                        <a href="https://www.instagram.com/promobeer" style="color: var(--color-white); font-size: 1.5rem; margin-right: 1rem;"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.facebook.com/Promobeer" style="color: var(--color-white); font-size: 1.5rem; margin-right: 1rem;"><i class="fab fa-facebook"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-links">
+                    <h4 style="color: var(--color-white); margin-bottom: 1.5rem; font-family: var(--font-display);">Links Úteis</h4>
+                    <ul style="list-style: none; padding: 0;">
+                        <li style="margin-bottom: 0.5rem;"><a href="#sobre" style="color: rgba(255,255,255,0.7); text-decoration: none;">O que é</a></li>
+                        <li style="margin-bottom: 0.5rem;"><a href="#funcionalidades" style="color: rgba(255,255,255,0.7); text-decoration: none;">Funcionalidades</a></li>
+                        <li style="margin-bottom: 0.5rem;"><a href="#cidades" style="color: rgba(255,255,255,0.7); text-decoration: none;">Cidades</a></li>
+                        <li style="margin-bottom: 0.5rem;"><a href="#download" style="color: rgba(255,255,255,0.7); text-decoration: none;">Download</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-contact">
+                    <h4 style="color: var(--color-white); margin-bottom: 1.5rem; font-family: var(--font-display);">Contato</h4>
+                    <p style="color: rgba(255,255,255,0.7); margin-bottom: 0.5rem;"><i class="fas fa-envelope" style="margin-right: 0.5rem;"></i> contato@promobeerapp.com</p>
+                </div>
+            </div>
+
+            <div class="footer-bottom" style="border-top: 1px solid rgba(255,255,255,0.1); padding: 2rem 0; text-align: center;">
+                <p class="footer-copyright" style="color: rgba(255,255,255,0.5);">© 2026 PromoBeer Brasil. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top -->
+    <button class="back-to-top" aria-label="Voltar ao topo">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <script src="js/main.js" defer></script>
+</body>
+</html>
+
+    <!-- Back to Top -->
+    <button class="back-to-top" aria-label="Voltar ao topo">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
