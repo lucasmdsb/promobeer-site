@@ -1498,6 +1498,57 @@ h4 { font-size: clamp(1.25rem, 2vw, 1.5rem); }
 }
 
 /* ===================================
+   Como Funciona Section
+   =================================== */
+.section-how-it-works {
+    background: var(--color-light);
+}
+
+.step-card {
+    background: var(--color-white);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-md);
+    transition: transform var(--transition-base), box-shadow var(--transition-base);
+}
+
+.step-card:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-xl);
+}
+
+.step-number {
+    transition: transform var(--transition-base);
+}
+
+.step-card:hover .step-number {
+    transform: scale(1.1);
+}
+
+/* ===================================
+   Ranking Section
+   =================================== */
+.section-ranking {
+    background: var(--color-white);
+}
+
+.ranking-item {
+    transition: background-color var(--transition-fast);
+}
+
+.ranking-item:hover {
+    background-color: var(--color-light);
+}
+
+.rank-pos {
+    font-family: var(--font-display);
+}
+
+.rank-score {
+    font-family: var(--font-body);
+    font-size: 0.875rem;
+}
+
+/* ===================================
    Footer
    =================================== */
 .footer {
