@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Termos de Uso | PromoBeer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@300;400;500;600;700;800&display=swap" as="style" onload="this.rel='stylesheet'">
+    <noscript><link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"></noscript>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" media="print" onload="this.media='all'">
+    <style>
+        .termos-header {
+            background: var(--color-primary);
+            padding: 1.5rem 0;
+            text-align: center;
+        }
+
+        .termos-header-logo {
+            font-family: var(--font-display);
+            font-size: 1.75rem;
+            letter-spacing: 0.1em;
+            color: var(--color-white);
+            text-decoration: none;
+        }
+
+        .termos-hero {
+            background: var(--color-primary);
+            padding: 3rem 0 4rem;
+            text-align: center;
+        }
+
+        .termos-hero-tag {
+            display: inline-block;
+            font-family: var(--font-body);
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+            color: var(--color-secondary);
+            margin-bottom: 1rem;
+        }
+
+        .termos-hero-title {
+            font-family: var(--font-display);
+            font-size: clamp(2.5rem, 6vw, 4rem);
+            color: var(--color-white);
+            letter-spacing: 0.03em;
+            margin-bottom: 1rem;
+        }
+
+        .termos-hero-meta {
+            font-family: var(--font-body);
+            font-size: 0.875rem;
+            color: rgba(255, 255, 255, 0.5);
+        }
+
+        .termos-body {
+            background: var(--color-off-white);
+            padding: 4rem 0 6rem;
+        }
+
+        .termos-content {
+            max-width: 780px;
+            margin: 0 auto;
+            padding: 0 var(--container-padding);
+        }
+
+        .termos-section {
+            background: var(--color-white);
+            border-radius: var(--radius-lg);
+            padding: 2.5rem;
+            margin-bottom: 1.5rem;
+            box-shadow: var(--shadow-sm);
+            border: 1px solid var(--color-gray-100);
+        }
+
+        .termos-section-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1.75rem;
+            padding-bottom: 1.25rem;
+            border-bottom: 2px solid var(--color-secondary);
+        }
+
+        .termos-section-icon {
+            width: 42px;
+            height: 42px;
+            background: rgba(243, 156, 18, 0.12);
+            border-radius: var(--radius-md);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .termos-section-icon i {
+            font-size: 1.1rem;
+            color: var(--color-secondary);
+        }
+
+        .termos-section-title {
+            font-family: var(--font-display);
+            font-size: 1.5rem;
+            color: var(--color-primary);
+            letter-spacing: 0.03em;
+        }
+
+        .termos-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            gap: 0.875rem;
+        }
+
+        .termos-list li {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.875rem;
+            font-family: var(--font-body);
+            font-size: 0.95rem;
+            color: var(--color-gray-500);
+            line-height: 1.7;
+        }
+
+        .termos-list li::before {
+            content: '';
+            width: 7px;
+            height: 7px;
+            min-width: 7px;
+            background: var(--color-secondary);
+            border-radius: 50%;
+            margin-top: 0.55rem;
+        }
+
+        .termos-footer {
+            background: var(--color-primary);
+            padding: 2rem 0;
+            text-align: center;
+        }
+
+        .termos-footer p {
+            font-family: var(--font-body);
+            font-size: 0.8rem;
+            color: rgba(255, 255, 255, 0.4);
+            margin-bottom: 1rem;
+        }
+
+        .termos-footer-social {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1.25rem;
+        }
+
+        .termos-footer-social a {
+            color: rgba(255, 255, 255, 0.4);
+            font-size: 1.2rem;
+            transition: color var(--transition-fast);
+        }
+
+        .termos-footer-social a:hover {
+            color: var(--color-secondary);
+        }
+    </style>
+</head>
+<body class="theme-mm">
+
+    <header class="termos-header">
+        <a href="/" class="termos-header-logo">
+            PROMO<span style="color: var(--color-secondary);">BEER</span>
+        </a>
+    </header>
+
+    <section class="termos-hero">
+        <div class="container">
+            <span class="termos-hero-tag">Legal</span>
+            <h1 class="termos-hero-title">Termos de Uso</h1>
+            <p class="termos-hero-meta">Ao utilizar o PromoBeer, você concorda com os termos descritos abaixo.</p>
+        </div>
+    </section>
+
+    <main class="termos-body">
+        <div class="termos-content">
+
+            <!-- Termos básicos -->
+            <div class="termos-section">
+                <div class="termos-section-header">
+                    <div class="termos-section-icon"><i class="fas fa-file-alt"></i></div>
+                    <h2 class="termos-section-title">Termos Básicos</h2>
+                </div>
+                <ul class="termos-list">
+                    <li>O uso do serviço é permitido apenas para maiores de 18 anos.</li>
+                    <li>É proibido publicar conteúdo com violência, nudez, nudez parcial, discriminação, atos ilegais, transgressões, ódio, pornografia ou sexo.</li>
+                    <li>Você é responsável pela sua conta. É proibido transferi-la ou vendê-la; as informações fornecidas devem ser precisas.</li>
+                    <li>É proibido solicitar as credenciais de outros usuários.</li>
+                    <li>Você é responsável pelo conteúdo que posta no serviço.</li>
+                    <li>É proibido difamar, perseguir, praticar bullying, abusar, assediar, ameaçar ou publicar informações privadas ou confidenciais de terceiros.</li>
+                    <li>O uso do serviço deve estar em conformidade com todas as leis aplicáveis. Atividades ilegais são estritamente proibidas.</li>
+                    <li>Você é pessoalmente responsável por todo o conteúdo enviado ao serviço.</li>
+                    <li>São proibidas modificações que impliquem falsamente associação ou endosso do serviço.</li>
+                    <li>O acesso à API privada do PromoBeer é restrito e sujeito a autorização prévia.</li>
+                    <li>É proibido o envio de spam ou qualquer comunicação comercial não solicitada.</li>
+                    <li>O uso de nomes de domínio em usernames sem autorização expressa é vedado.</li>
+                    <li>É proibido interferir tecnicamente no serviço, incluindo o uso de malware ou alteração da renderização da plataforma.</li>
+                    <li>É proibido criar contas por meios não autorizados, incluindo dispositivos automatizados, scripts ou bots.</li>
+                    <li>É proibido impedir ou dificultar o uso do serviço por outros usuários.</li>
+                </ul>
+            </div>
+
+            <!-- Condições gerais -->
+            <div class="termos-section">
+                <div class="termos-section-header">
+                    <div class="termos-section-icon"><i class="fas fa-shield-alt"></i></div>
+                    <h2 class="termos-section-title">Condições Gerais</h2>
+                </div>
+                <ul class="termos-list">
+                    <li>O PromoBeer se reserva o direito de modificar ou encerrar o serviço a qualquer momento, sem aviso prévio.</li>
+                    <li>Todas as licenças concedidas ao usuário cessam imediatamente após o encerramento do serviço ou da conta.</li>
+                    <li>O PromoBeer pode alterar estes Termos de Uso com aviso prévio, exceto quando a alteração for exigida por motivos legais.</li>
+                    <li>O PromoBeer se reserva o direito de recusar acesso ao serviço a qualquer usuário, a seu exclusivo critério.</li>
+                    <li>O PromoBeer pode cancelar ou transferir nomes de usuário (usernames) conforme necessário.</li>
+                    <li>O PromoBeer tem o direito discricionário de remover qualquer conteúdo publicado na plataforma.</li>
+                    <li>O PromoBeer não se responsabiliza por interações, conflitos ou transações entre usuários.</li>
+                    <li>O usuário é responsável por quaisquer cobranças de dados decorrentes do uso do serviço.</li>
+                    <li>É proibido rastrear, fazer scraping ou armazenar em cache qualquer conteúdo do serviço sem autorização prévia.</li>
+                </ul>
+            </div>
+
+            <!-- Direitos -->
+            <div class="termos-section">
+                <div class="termos-section-header">
+                    <div class="termos-section-icon"><i class="fas fa-balance-scale"></i></div>
+                    <h2 class="termos-section-title">Direitos</h2>
+                </div>
+                <ul class="termos-list">
+                    <li>Ao publicar conteúdo no PromoBeer, você concede ao serviço uma licença global, não exclusiva e isenta de royalties para usar, reproduzir e distribuir esse conteúdo.</li>
+                    <li>O PromoBeer pode exibir publicidade integrada ao serviço.</li>
+                    <li>Nem sempre é possível identificar conteúdo patrocinado ou publicitário de forma explícita na plataforma.</li>
+                    <li>Ao publicar conteúdo, o usuário garante que possui todos os direitos necessários sobre o material enviado.</li>
+                    <li>O conteúdo produzido pelo PromoBeer é protegido por leis de propriedade intelectual e não pode ser reproduzido sem autorização.</li>
+                    <li>As marcas registradas do PromoBeer são protegidas e seu uso não autorizado é vedado.</li>
+                    <li>O PromoBeer pode interromper o serviço ou remover conteúdo a qualquer momento, sem aviso prévio.</li>
+                    <li>O PromoBeer não garante a confidencialidade do conteúdo enviado à plataforma.</li>
+                    <li>O PromoBeer não aceita materiais ou ideias não solicitados enviados por usuários ou terceiros.</li>
+                </ul>
+            </div>
+
+            <!-- Denúncia de violações -->
+            <div class="termos-section">
+                <div class="termos-section-header">
+                    <div class="termos-section-icon"><i class="fas fa-flag"></i></div>
+                    <h2 class="termos-section-title">Denúncia de Violações de Direitos Autorais</h2>
+                </div>
+                <ul class="termos-list">
+                    <li>O PromoBeer respeita os direitos de propriedade intelectual de terceiros e espera que seus usuários façam o mesmo.</li>
+                    <li>Contas que cometerem violações repetidas de direitos autorais ou de propriedade intelectual poderão ser desativadas permanentemente.</li>
+                </ul>
+            </div>
+
+        </div>
+    </main>
+
+    <footer class="termos-footer">
+        <div class="container">
+            <p>© 2026 PromoBeer Brasil. Todos os direitos reservados.</p>
+            <div class="termos-footer-social">
+                <a href="https://www.instagram.com/promobeer" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.facebook.com/Promobeer" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

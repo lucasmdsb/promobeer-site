@@ -1,5 +1,5 @@
 /**
- * Montenegro Musicalização - Main JavaScript
+ * PromoBeer - Main JavaScript
  */
 
 document.addEventListener('DOMContentLoaded', function() {
@@ -7,38 +7,10 @@ document.addEventListener('DOMContentLoaded', function() {
     initMobileMenu();
     initHeader();
     initTestimonialsSlider();
-    initEventsCarousel();
     initBackToTop();
     initSmoothScroll();
     initAnimations();
-    // initHeroVideo(); // Desativado para deixar o autoplay do HTML agir sozinho
 });
-
-/**
- * Background Hero Video
- */
-function initHeroVideo() {
-    const video = document.querySelector('.hero-video');
-    if (!video) return;
-
-    const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    if (prefersReduced) return;
-
-    const io = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                if (video.preload !== 'auto') video.preload = 'auto';
-                const p = video.play?.();
-                if (p && typeof p.then === 'function') {
-                    p.catch(() => {});
-                }
-                io.unobserve(entry.target);
-            }
-        });
-    }, { rootMargin: '100px 0px', threshold: 0.1 });
-
-    io.observe(video);
-}
 
 /**
  * Mobile Menu Toggle
@@ -203,131 +175,6 @@ function initTestimonialsSlider() {
 }
 
 /**
- * Events Carousel (fotos dos eventos) - várias fotos por vez
- */
-function initEventsCarousel() {
-    const carousel = document.querySelector('.events-carousel');
-    const track = document.querySelector('.events-carousel-track');
-    const slides = document.querySelectorAll('.events-carousel-slide');
-    const prevBtn = document.querySelector('.events-carousel-prev');
-    const nextBtn = document.querySelector('.events-carousel-next');
-    const dotsContainer = document.querySelector('.events-carousel-dots');
-
-    if (!carousel || !track || slides.length === 0) return;
-
-    let currentIndex = 0;
-    const totalSlides = slides.length;
-    const AUTOPLAY_INTERVAL = 4000;
-    let autoplayTimer = null;
-    let stepPx = 0;
-
-    function getSlidesPerView() {
-        const w = window.innerWidth;
-        if (w >= 1024) return 3;
-        if (w >= 768) return 2;
-        return 1;
-    }
-
-    function getMaxIndex() {
-        const perView = getSlidesPerView();
-        return Math.max(0, totalSlides - perView);
-    }
-
-    function recalcStep() {
-        const perView = getSlidesPerView();
-        const gap = 8; // 0.5rem ≈ 8px
-        stepPx = Math.round(carousel.clientWidth / perView) + gap;
-    }
-
-    function updateCarousel() {
-        requestAnimationFrame(() => {
-            track.style.transform = `translateX(${-currentIndex * stepPx}px)`;
-        });
-        updateDots();
-    }
-
-    function goToNext() {
-        const maxIdx = getMaxIndex();
-        currentIndex = currentIndex >= maxIdx ? 0 : currentIndex + 1;
-        updateCarousel();
-    }
-
-    function startAutoplay() {
-        stopAutoplay();
-        autoplayTimer = setInterval(goToNext, AUTOPLAY_INTERVAL);
-    }
-
-    function stopAutoplay() {
-        if (autoplayTimer) {
-            clearInterval(autoplayTimer);
-            autoplayTimer = null;
-        }
-    }
-
-    function getTotalDots() {
-        return Math.ceil(totalSlides / getSlidesPerView()) || 1;
-    }
-
-    function updateDots() {
-        if (!dotsContainer) return;
-        const dots = dotsContainer.querySelectorAll('.dot');
-        const perView = getSlidesPerView();
-        const activeDot = Math.min(Math.floor(currentIndex / perView), dots.length - 1);
-        dots.forEach((dot, i) => dot.classList.toggle('active', i === activeDot));
-    }
-
-    function createDots() {
-        if (!dotsContainer) return;
-        dotsContainer.innerHTML = '';
-        const totalDots = getTotalDots();
-        const perView = getSlidesPerView();
-        for (let i = 0; i < totalDots; i++) {
-            const dot = document.createElement('button');
-            dot.type = 'button';
-            dot.classList.add('dot');
-            if (i === 0) dot.classList.add('active');
-            dot.setAttribute('aria-label', 'Ir para página ' + (i + 1));
-            dot.addEventListener('click', () => {
-                currentIndex = Math.min(i * perView, getMaxIndex());
-                updateCarousel();
-                startAutoplay();
-            });
-            dotsContainer.appendChild(dot);
-        }
-    }
-
-    if (prevBtn) {
-        prevBtn.addEventListener('click', () => {
-            const maxIdx = getMaxIndex();
-            currentIndex = currentIndex === 0 ? maxIdx : currentIndex - 1;
-            updateCarousel();
-            startAutoplay();
-        });
-    }
-    if (nextBtn) {
-        nextBtn.addEventListener('click', () => {
-            goToNext();
-            startAutoplay();
-        });
-    }
-
-    carousel.addEventListener('mouseenter', stopAutoplay);
-    carousel.addEventListener('mouseleave', startAutoplay);
-
-    window.addEventListener('resize', throttle(function() {
-        currentIndex = Math.min(currentIndex, getMaxIndex());
-        createDots();
-        recalcStep();
-        updateCarousel();
-    }, 150));
-
-    recalcStep();
-    createDots();
-    updateCarousel();
-    startAutoplay();
-}
-
-/**
  * Back to Top Button
  */
 function initBackToTop() {
@@ -397,7 +244,7 @@ function initAnimations() {
     
     // Observe elements
     const animateElements = document.querySelectorAll(
-        '.program-card, .news-card, .testimonial-card, .diferencial-card, .quem-somos-stat'
+        '.program-card, .testimonial-card, .quem-somos-stat'
     );
     
     animateElements.forEach((el, index) => {

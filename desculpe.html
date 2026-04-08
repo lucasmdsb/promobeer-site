@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Região não disponível | PromoBeer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@300;400;500;600;700;800&display=swap" as="style" onload="this.rel='stylesheet'">
+    <noscript><link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"></noscript>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" media="print" onload="this.media='all'">
+    <style>
+        .desculpe-page {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background: var(--color-primary);
+            padding: var(--space-xl) var(--container-padding);
+            text-align: center;
+        }
+
+        .desculpe-card {
+            background: var(--color-white);
+            border-radius: var(--radius-xl);
+            padding: 3.5rem 2.5rem;
+            max-width: 500px;
+            width: 100%;
+            box-shadow: var(--shadow-xl);
+        }
+
+        .desculpe-logo {
+            font-family: var(--font-display);
+            font-size: 2rem;
+            letter-spacing: 0.1em;
+            color: var(--color-primary);
+            margin-bottom: 2rem;
+            display: block;
+        }
+
+        .desculpe-icon {
+            width: 80px;
+            height: 80px;
+            background: rgba(26, 26, 46, 0.07);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.75rem;
+        }
+
+        .desculpe-icon i {
+            font-size: 2.25rem;
+            color: var(--color-primary);
+        }
+
+        .desculpe-title {
+            font-family: var(--font-display);
+            font-size: clamp(1.75rem, 5vw, 2.5rem);
+            color: var(--color-primary);
+            margin-bottom: 1rem;
+            letter-spacing: 0.03em;
+        }
+
+        .desculpe-text {
+            font-family: var(--font-body);
+            font-size: 1rem;
+            color: var(--color-gray-500);
+            line-height: 1.7;
+            margin-bottom: 2.25rem;
+        }
+
+        .desculpe-divider {
+            height: 1px;
+            background: var(--color-gray-100);
+            margin: 0 0 2rem;
+        }
+
+        .desculpe-form-label {
+            font-family: var(--font-body);
+            font-size: 0.8rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: var(--color-gray-400);
+            margin-bottom: 1.25rem;
+        }
+
+        .form-group {
+            margin-bottom: 1rem;
+            text-align: left;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 0.875rem 1rem;
+            font-family: var(--font-body);
+            font-size: 0.9rem;
+            color: var(--color-dark);
+            background: var(--color-off-white);
+            border: 1.5px solid var(--color-gray-100);
+            border-radius: var(--radius-md);
+            outline: none;
+            transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+            resize: none;
+        }
+
+        .form-group input::placeholder,
+        .form-group textarea::placeholder {
+            color: var(--color-gray-300);
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            border-color: var(--color-secondary);
+            box-shadow: 0 0 0 3px rgba(243, 156, 18, 0.15);
+            background: var(--color-white);
+        }
+
+        .form-group textarea {
+            height: 110px;
+        }
+
+        .form-feedback {
+            font-family: var(--font-body);
+            font-size: 0.875rem;
+            border-radius: var(--radius-md);
+            padding: 0.75rem 1rem;
+            margin-bottom: 1rem;
+            display: none;
+            text-align: left;
+        }
+
+        .form-feedback.success {
+            background: #e8f8f0;
+            color: #27ae60;
+            display: block;
+        }
+
+        .form-feedback.error {
+            background: #fdecea;
+            color: #e74c3c;
+            display: block;
+        }
+
+        .btn-submit {
+            width: 100%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: var(--space-sm);
+            padding: 0.9rem 1.5rem;
+            font-family: var(--font-body);
+            font-size: 0.9rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            border-radius: var(--radius-sm);
+            border: 2px solid var(--color-secondary);
+            background: var(--color-secondary);
+            color: var(--color-white);
+            cursor: pointer;
+            transition: all var(--transition-base);
+        }
+
+        .btn-submit:hover:not(:disabled) {
+            background: var(--color-secondary-dark);
+            border-color: var(--color-secondary-dark);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .btn-submit:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+        }
+
+        .desculpe-contact {
+            display: flex;
+            flex-direction: column;
+            gap: 0.6rem;
+            margin: 2rem 0;
+        }
+
+        .desculpe-contact-item {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.6rem;
+            font-family: var(--font-body);
+            font-size: 0.9rem;
+            color: var(--color-gray-500);
+        }
+
+        .desculpe-contact-item i {
+            color: var(--color-secondary);
+            width: 1rem;
+        }
+
+        .desculpe-contact-item a {
+            color: var(--color-gray-500);
+            transition: color var(--transition-fast);
+        }
+
+        .desculpe-contact-item a:hover {
+            color: var(--color-secondary);
+        }
+
+        .desculpe-social {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1.25rem;
+            margin-top: 1.5rem;
+        }
+
+        .desculpe-social a {
+            color: var(--color-gray-400);
+            font-size: 1.4rem;
+            transition: color var(--transition-fast);
+        }
+
+        .desculpe-social a:hover {
+            color: var(--color-secondary);
+        }
+    </style>
+</head>
+<body class="theme-mm">
+    <main class="desculpe-page">
+        <div class="desculpe-card">
+            <a href="/" class="desculpe-logo">
+                PROMO<span style="color: var(--color-secondary);">BEER</span>
+            </a>
+
+            <div class="desculpe-icon">
+                <i class="fas fa-map-marker-alt"></i>
+            </div>
+
+            <h1 class="desculpe-title">Sua região ainda não está disponível</h1>
+
+            <p class="desculpe-text">
+                Pedimos desculpas! O PromoBeer ainda não chegou na sua cidade, mas estamos crescendo rapidamente. Manda sua sugestão para a gente e você pode ser o próximo!
+            </p>
+
+            <div class="desculpe-divider"></div>
+
+            <p class="desculpe-form-label">Sugira sua região</p>
+
+            <form id="contactForm" novalidate>
+                <div class="form-group">
+                    <input type="text" id="name" name="name" placeholder="Seu nome" required autocomplete="name">
+                </div>
+                <div class="form-group">
+                    <input type="email" id="email" name="email" placeholder="Seu e-mail" required autocomplete="email">
+                </div>
+                <div class="form-group">
+                    <textarea id="message" name="message" placeholder="Sua cidade e estado (ex: Campina Grande, PB)" required></textarea>
+                </div>
+
+                <div id="formFeedback" class="form-feedback" role="alert"></div>
+
+                <button type="submit" id="submitBtn" class="btn-submit">
+                    <i class="fas fa-paper-plane"></i> Enviar sugestão
+                </button>
+            </form>
+
+            <div class="desculpe-contact">
+                <div class="desculpe-contact-item">
+                    <i class="fab fa-whatsapp"></i>
+                    <a href="https://wa.me/5585999026227" target="_blank" rel="noopener noreferrer">+55 (85) 99902-6227</a>
+                </div>
+                <div class="desculpe-contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <a href="mailto:contato@promobeerapp.com">contato@promobeerapp.com</a>
+                </div>
+                <div class="desculpe-contact-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>Ceará, Brasil</span>
+                </div>
+            </div>
+
+            <div class="desculpe-social">
+                <a href="https://www.instagram.com/promobeer" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.facebook.com/Promobeer" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', async function (e) {
+            e.preventDefault();
+
+            const btn = document.getElementById('submitBtn');
+            const feedback = document.getElementById('formFeedback');
+            const name = document.getElementById('name').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const message = document.getElementById('message').value.trim();
+
+            feedback.className = 'form-feedback';
+            feedback.textContent = '';
+
+            if (!name || !email || !message) {
+                feedback.className = 'form-feedback error';
+                feedback.textContent = 'Por favor, preencha todos os campos.';
+                return;
+            }
+
+            btn.disabled = true;
+            btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Enviando...';
+
+            try {
+                const res = await fetch('https://api.promobeerapp.com/contact', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ name, email, message }),
+                });
+
+                if (res.ok) {
+                    feedback.className = 'form-feedback success';
+                    feedback.textContent = 'Mensagem enviada com sucesso! Nós lhe responderemos o mais breve possível 🙂';
+                    document.getElementById('contactForm').reset();
+                } else {
+                    throw new Error();
+                }
+            } catch {
+                feedback.className = 'form-feedback error';
+                feedback.textContent = 'Ocorreu um erro ao enviar. Tente novamente ou fale conosco pelo WhatsApp.';
+            } finally {
+                btn.disabled = false;
+                btn.innerHTML = '<i class="fas fa-paper-plane"></i> Enviar sugestão';
+            }
+        });
+    </script>
+</body>
+</html>

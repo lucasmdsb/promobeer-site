@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro não confirmado | PromoBeer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@300;400;500;600;700;800&display=swap" as="style" onload="this.rel='stylesheet'">
+    <noscript><link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"></noscript>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" media="print" onload="this.media='all'">
+    <style>
+        .naovalidado-page {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background: var(--color-primary);
+            padding: var(--space-xl) var(--container-padding);
+            text-align: center;
+        }
+
+        .naovalidado-card {
+            background: var(--color-white);
+            border-radius: var(--radius-xl);
+            padding: 3.5rem 2.5rem;
+            max-width: 480px;
+            width: 100%;
+            box-shadow: var(--shadow-xl);
+        }
+
+        .naovalidado-logo {
+            font-family: var(--font-display);
+            font-size: 2rem;
+            letter-spacing: 0.1em;
+            color: var(--color-primary);
+            margin-bottom: 2rem;
+            display: block;
+        }
+
+        .naovalidado-icon {
+            width: 80px;
+            height: 80px;
+            background: #fdecea;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.75rem;
+        }
+
+        .naovalidado-icon i {
+            font-size: 2.25rem;
+            color: #e74c3c;
+        }
+
+        .naovalidado-title {
+            font-family: var(--font-display);
+            font-size: clamp(1.75rem, 5vw, 2.5rem);
+            color: var(--color-primary);
+            margin-bottom: 1rem;
+            letter-spacing: 0.03em;
+        }
+
+        .naovalidado-text {
+            font-family: var(--font-body);
+            font-size: 1rem;
+            color: var(--color-gray-500);
+            line-height: 1.7;
+            margin-bottom: 1.75rem;
+        }
+
+        .naovalidado-tip {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.75rem;
+            background: var(--color-off-white);
+            border-radius: var(--radius-md);
+            padding: 1rem 1.25rem;
+            margin-bottom: 2.25rem;
+            text-align: left;
+        }
+
+        .naovalidado-tip i {
+            color: var(--color-secondary);
+            margin-top: 2px;
+            flex-shrink: 0;
+        }
+
+        .naovalidado-tip p {
+            font-family: var(--font-body);
+            font-size: 0.875rem;
+            color: var(--color-gray-500);
+            line-height: 1.6;
+            margin: 0;
+        }
+
+        .naovalidado-divider {
+            height: 1px;
+            background: var(--color-gray-100);
+            margin: 0 0 2rem;
+        }
+
+        .naovalidado-cta-label {
+            font-family: var(--font-body);
+            font-size: 0.8rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: var(--color-gray-400);
+            margin-bottom: 1rem;
+        }
+
+        .naovalidado-contact {
+            display: flex;
+            flex-direction: column;
+            gap: 0.6rem;
+            margin-bottom: 2rem;
+        }
+
+        .naovalidado-contact-item {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.6rem;
+            font-family: var(--font-body);
+            font-size: 0.9rem;
+            color: var(--color-gray-500);
+        }
+
+        .naovalidado-contact-item i {
+            color: var(--color-secondary);
+            width: 1rem;
+        }
+
+        .naovalidado-contact-item a {
+            color: var(--color-gray-500);
+            transition: color var(--transition-fast);
+        }
+
+        .naovalidado-contact-item a:hover {
+            color: var(--color-secondary);
+        }
+
+        .naovalidado-social {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1.25rem;
+        }
+
+        .naovalidado-social a {
+            color: var(--color-gray-400);
+            font-size: 1.4rem;
+            transition: color var(--transition-fast);
+        }
+
+        .naovalidado-social a:hover {
+            color: var(--color-secondary);
+        }
+    </style>
+</head>
+<body class="theme-mm">
+    <main class="naovalidado-page">
+        <div class="naovalidado-card">
+            <a href="/" class="naovalidado-logo">
+                PROMO<span style="color: var(--color-secondary);">BEER</span>
+            </a>
+
+            <div class="naovalidado-icon">
+                <i class="fas fa-envelope-circle-check"></i>
+            </div>
+
+            <h1 class="naovalidado-title">Cadastro não confirmado!</h1>
+
+            <p class="naovalidado-text">
+                Confirme primeiro o seu e-mail. Enviamos uma mensagem de verificação para o endereço cadastrado — clique no link dentro do e-mail para liberar o acesso ao app.
+            </p>
+
+            <div class="naovalidado-tip">
+                <i class="fas fa-info-circle"></i>
+                <p>Não encontrou o e-mail? Verifique a pasta de <strong>spam</strong> ou <strong>lixo eletrônico</strong>. Se precisar de ajuda, fale com a gente.</p>
+            </div>
+
+            <div class="naovalidado-divider"></div>
+
+            <p class="naovalidado-cta-label">Precisa de ajuda?</p>
+
+            <div class="naovalidado-contact">
+                <div class="naovalidado-contact-item">
+                    <i class="fab fa-whatsapp"></i>
+                    <a href="https://wa.me/5585999026227" target="_blank" rel="noopener noreferrer">+55 (85) 99902-6227</a>
+                </div>
+                <div class="naovalidado-contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <a href="mailto:contato@promobeerapp.com">contato@promobeerapp.com</a>
+                </div>
+            </div>
+
+            <div class="naovalidado-social">
+                <a href="https://www.instagram.com/promobeer" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.facebook.com/Promobeer" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
