@@ -10,6 +10,7 @@ document.addEventListener('DOMContentLoaded', function() {
     initBackToTop();
     initSmoothScroll();
     initAnimations();
+    initSmartDownload();
 });
 
 /**
@@ -251,6 +252,26 @@ function initAnimations() {
         el.style.opacity = '0';
         el.style.animationDelay = `${(index % 6) * 0.1}s`;
         observer.observe(el);
+    });
+}
+
+/**
+ * Smart Download Button
+ */
+function initSmartDownload() {
+    const GOOGLE_PLAY = 'https://play.google.com/store/apps/details?id=com.promobeerapp.promobeer';
+    const APP_STORE   = 'https://apps.apple.com/br/app/promobeer/id1033253442';
+
+    const btn = document.getElementById('btn-download-app');
+    if (!btn) return;
+
+    btn.addEventListener('click', function (e) {
+        e.preventDefault();
+        const ua = navigator.userAgent;
+        const isIOS = /iPhone|iPad|iPod/i.test(ua);
+        const isMac = /Macintosh|MacIntel/i.test(ua);
+        const url = (isIOS || isMac) ? APP_STORE : GOOGLE_PLAY;
+        window.open(url, '_blank');
     });
 }
 
