@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Política de Privacidade | PromoBeer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@300;400;500;600;700;800&display=swap" as="style" onload="this.rel='stylesheet'">
+    <noscript><link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"></noscript>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" media="print" onload="this.media='all'">
+    <style>
+        .termos-header {
+            background: var(--color-primary);
+            padding: 1.5rem 0;
+            text-align: center;
+        }
+
+        .termos-header-logo {
+            font-family: var(--font-display);
+            font-size: 1.75rem;
+            letter-spacing: 0.1em;
+            color: var(--color-white);
+            text-decoration: none;
+        }
+
+        .termos-hero {
+            background: var(--color-primary);
+            padding: 3rem 0 4rem;
+            text-align: center;
+        }
+
+        .termos-hero-tag {
+            display: inline-block;
+            font-family: var(--font-body);
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+            color: var(--color-secondary);
+            margin-bottom: 1rem;
+        }
+
+        .termos-hero-title {
+            font-family: var(--font-display);
+            font-size: clamp(2.5rem, 6vw, 4rem);
+            color: var(--color-white);
+            letter-spacing: 0.03em;
+            margin-bottom: 1rem;
+        }
+
+        .termos-hero-meta {
+            font-family: var(--font-body);
+            font-size: 0.875rem;
+            color: rgba(255, 255, 255, 0.5);
+        }
+
+        .termos-body {
+            background: var(--color-off-white);
+            padding: 4rem 0 6rem;
+        }
+
+        .termos-content {
+            max-width: 780px;
+            margin: 0 auto;
+            padding: 0 var(--container-padding);
+        }
+
+        .termos-section {
+            background: var(--color-white);
+            border-radius: var(--radius-lg);
+            padding: 2.5rem;
+            margin-bottom: 1.5rem;
+            box-shadow: var(--shadow-sm);
+            border: 1px solid var(--color-gray-100);
+        }
+
+        .termos-section-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1.75rem;
+            padding-bottom: 1.25rem;
+            border-bottom: 2px solid var(--color-secondary);
+        }
+
+        .termos-section-icon {
+            width: 42px;
+            height: 42px;
+            background: rgba(243, 156, 18, 0.12);
+            border-radius: var(--radius-md);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .termos-section-icon i {
+            font-size: 1.1rem;
+            color: var(--color-secondary);
+        }
+
+        .termos-section-title {
+            font-family: var(--font-display);
+            font-size: 1.5rem;
+            color: var(--color-primary);
+            letter-spacing: 0.03em;
+        }
+
+        .termos-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            gap: 0.875rem;
+        }
+
+        .termos-list li {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.875rem;
+            font-family: var(--font-body);
+            font-size: 0.95rem;
+            color: var(--color-gray-500);
+            line-height: 1.7;
+        }
+
+        .termos-list li::before {
+            content: '';
+            width: 7px;
+            height: 7px;
+            min-width: 7px;
+            background: var(--color-secondary);
+            border-radius: 50%;
+            margin-top: 0.55rem;
+        }
+
+        .termos-text {
+            font-family: var(--font-body);
+            font-size: 0.95rem;
+            color: var(--color-gray-500);
+            line-height: 1.7;
+        }
+
+        .preencher {
+            background: #fff3b0;
+            color: #7a4b00;
+            font-weight: 700;
+            padding: 0 0.25rem;
+            border-radius: 3px;
+        }
+
+        .termos-text a,
+        .termos-list a {
+            color: var(--color-secondary);
+            font-weight: 600;
+        }
+
+        .preencher {
+            background: #fff3b0;
+            color: #7a4b00;
+            font-weight: 700;
+            padding: 0 0.25rem;
+            border-radius: 3px;
+        }
+
+        .termos-text + .termos-list,
+        .termos-list + .termos-text,
+        .termos-text + .termos-text {
+            margin-top: 1rem;
+        }
+
+        .termos-subtitle {
+            font-family: var(--font-body);
+            font-size: 1rem;
+            font-weight: 700;
+            color: var(--color-primary);
+            margin: 1.5rem 0 0.75rem;
+        }
+
+        .termos-highlight {
+            background: rgba(243, 156, 18, 0.1);
+            border-left: 4px solid var(--color-secondary);
+            border-radius: var(--radius-md);
+            padding: 1rem 1.25rem;
+            margin-top: 1rem;
+        }
+
+        .termos-footer {
+            background: var(--color-primary);
+            padding: 2rem 0;
+            text-align: center;
+        }
+
+        .termos-footer p {
+            font-family: var(--font-body);
+            font-size: 0.8rem;
+            color: rgba(255, 255, 255, 0.4);
+            margin-bottom: 1rem;
+        }
+
+        .termos-footer-social {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1.25rem;
+        }
+
+        .termos-footer-social a {
+            color: rgba(255, 255, 255, 0.4);
+            font-size: 1.2rem;
+            transition: color var(--transition-fast);
+        }
+
+        .termos-footer-social a:hover {
+            color: var(--color-secondary);
+        }
+    </style>
+</head>
+<body class="theme-mm">
+
+    <header class="termos-header">
+        <a href="/" class="termos-header-logo">
+            PROMO<span style="color: var(--color-secondary);">BEER</span>
+        </a>
+    </header>
+
+    <section class="termos-hero">
+        <div class="container">
+            <span class="termos-hero-tag">Legal</span>
+            <h1 class="termos-hero-title">Política de Privacidade</h1>
+            <p class="termos-hero-meta">Como o PromoBeer coleta, usa e protege os seus dados, de acordo com a LGPD (Lei 13.709/2018).</p>
+            <p class="termos-hero-meta">Última atualização: 28 de outubro de 2026</p>
+        </div>
+    </section>
+
+    
+    <main class="termos-body">
+        <div class="termos-content">
+
+            <div class="termos-section">
+                <div class="termos-section-header">
+                    <div class="termos-section-icon"><i class="fas fa-info-circle"></i></div>
+                    <h2 class="termos-section-title">Quem Somos</h2>
+                </div>
+                <p class="termos-text">O PromoBeer é um app para encontrar promoções de bebidas e itens de churrasco perto de você. O responsável pelos seus dados (o "controlador", na linguagem da LGPD) é <mark class="preencher">[PREENCHER — razão social e CNPJ]</mark>.</p>
+                <p class="termos-text">Esta Política vale para o app PromoBeer (iOS e Android) e para este site. Ela complementa os nossos <a href="uso.html">Termos de Uso</a>.</p>
+            </div>
+
+            <div class="termos-section">
+                <div class="termos-section-header">
+                    <div class="termos-section-icon"><i class="fas fa-database"></i></div>
+                    <h2 class="termos-section-title">Dados que Coletamos</h2>
+                </div>
+                <h3 class="termos-subtitle">Quando você cria uma conta</h3>
+                <ul class="termos-list">
+                    <li>Com e-mail e senha: nome, e-mail e senha.</li>
+                    <li>Com Google ou Apple: nome, e-mail e um identificador da sua conta no Google ou na Apple. Não recebemos a sua senha do Google nem da Apple.</li>
+                    <li>Se você usar a opção "Ocultar meu e-mail" da Apple, recebemos um endereço de encaminhamento terminado em <strong>@privaterelay.appleid.com</strong>, e não o seu e-mail real.</li>
+                    <li>Se o e-mail verificado já tiver conta no PromoBeer, as formas de login passam a dar acesso à mesma conta.</li>
+                    <li>Se você usava o app como visitante, os dados do visitante (como alertas e preferências) passam para a sua conta.</li>
+                </ul>
+                <h3 class="termos-subtitle">Quando você publica conteúdo</h3>
+                <ul class="termos-list">
+                    <li>As promoções e os conteúdos que você publica, como produto, preço, volume, estabelecimento e fotos. As promoções são públicas.</li>
+                </ul>
+                <h3 class="termos-subtitle">Quando você cria alertas de preço</h3>
+                <ul class="termos-list">
+                    <li>O produto, o volume, o preço máximo escolhido e a cidade do alerta.</li>
+                    <li>O termômetro de preço usa apenas o histórico de promoções públicas. Ele não usa dados de quem publicou essas promoções.</li>
+                </ul>
+                <h3 class="termos-subtitle">Quando você usa o app (dados de uso)</h3>
+                <p class="termos-text">O app registra e envia aos nossos servidores como ele é usado:</p>
+                <ul class="termos-list">
+                    <li>quando você abre o app;</li>
+                    <li>quando você vê uma promoção ou um estabelecimento, e de onde veio (lista, busca, mapa, alerta ou notificação);</li>
+                    <li>quando você toca em "como chegar", liga para um estabelecimento ou compartilha uma promoção;</li>
+                    <li>suas buscas: <strong>o termo digitado</strong> e quantos resultados apareceram;</li>
+                    <li>quando você troca a vitrine (Bebidas ou Churrasco) ou a categoria;</li>
+                    <li>quando você abre o app por uma notificação;</li>
+                    <li>quando você toca em links de conteúdos do Feed.</li>
+                </ul>
+                <p class="termos-text">Junto com cada registro enviamos:</p>
+                <ul class="termos-list">
+                    <li>um identificador aleatório do aparelho, criado pelo próprio app (não é o IMEI nem o identificador de publicidade);</li>
+                    <li>um identificador da sessão de uso;</li>
+                    <li>a versão do app e o sistema (iOS ou Android);</li>
+                    <li>a cidade selecionada no app;</li>
+                    <li>a data e a hora de cada ação.</li>
+                </ul>
+                <p class="termos-text">Esses registros ficam ligados à sua conta ou, se você não tiver conta, ao visitante.</p>
+                <div class="termos-highlight">
+                <p class="termos-text"><strong>O que não coletamos nos dados de uso:</strong> nome, e-mail, telefone, localização exata (GPS) ou contatos. A única coisa digitada por você que guardamos é o termo da busca. Por isso, <strong>não digite dados pessoais na busca</strong> (como nome, CPF ou telefone).</p>
+                </div>
+                <h3 class="termos-subtitle">Notificações</h3>
+                <ul class="termos-list">
+                    <li>Quando você toca numa notificação, o app registra que ela foi aberta, para sabermos se os avisos são úteis, e abre a promoção ou o estabelecimento.</li>
+                </ul>
+            </div>
+
+            <div class="termos-section">
+                <div class="termos-section-header">
+                    <div class="termos-section-icon"><i class="fas fa-bullseye"></i></div>
+                    <h2 class="termos-section-title">Para que Usamos</h2>
+                </div>
+                <ul class="termos-list">
+                    <li>Para criar e manter sua conta e permitir o login.</li>
+                    <li>Para mostrar promoções, enviar os alertas de preço e as notificações que você pediu.</li>
+                    <li>Para melhorar o app: entender o que as pessoas procuram, quais buscas não têm resultado e se as notificações são úteis.</li>
+                    <li>Para moderar conteúdo, prevenir fraudes e manter o serviço seguro.</li>
+                    <li>Para produzir relatórios estatísticos, agregados e anônimos, como explicado abaixo.</li>
+                    <li>Para cumprir obrigações legais.</li>
+                </ul>
+            </div>
+
+            <div class="termos-section">
+                <div class="termos-section-header">
+                    <div class="termos-section-icon"><i class="fas fa-chart-bar"></i></div>
+                    <h2 class="termos-section-title">Relatórios para Marcas e Estabelecimentos</h2>
+                </div>
+                <p class="termos-text">Com os dados de uso, produzimos <strong>relatórios estatísticos, agregados e anônimos</strong> para marcas, fabricantes e estabelecimentos. Por exemplo:</p>
+                <ul class="termos-list">
+                    <li>os produtos mais buscados em cada cidade;</li>
+                    <li>as buscas que não encontraram resultado;</li>
+                    <li>quantas pessoas viram uma promoção e pediram "como chegar";</li>
+                    <li>a relação entre o preço e a procura por um produto.</li>
+                </ul>
+                <div class="termos-highlight">
+                <p class="termos-text"><strong>Esses relatórios podem ser vendidos.</strong> Eles trazem apenas números somados de muitas pessoas e <strong>nunca identificam ninguém</strong>. Não vendemos nem compartilhamos dados individuais, nem a lista de quem viu o quê.</p>
+                </div>
+            </div>
+
+            <div class="termos-section">
+                <div class="termos-section-header">
+                    <div class="termos-section-icon"><i class="fas fa-gavel"></i></div>
+                    <h2 class="termos-section-title">Base Legal</h2>
+                </div>
+                <p class="termos-text"><mark class="preencher">[PREENCHER — confirmar com a revisão jurídica]</mark> Tratamos seus dados com base nas seguintes hipóteses da LGPD:</p>
+                <ul class="termos-list">
+                    <li><strong>Execução de contrato</strong> (art. 7º, V): para criar sua conta, fazer o login, mostrar promoções e enviar os alertas que você pediu.</li>
+                    <li><strong>Legítimo interesse</strong> (art. 7º, IX): para melhorar o app e produzir as estatísticas agregadas. Em termos simples: usamos esses dados porque eles são necessários para o PromoBeer funcionar bem e se manter, sem prejudicar você, e você pode desligar a coleta de dados de uso a qualquer momento.</li>
+                    <li><strong>Cumprimento de obrigação legal</strong> (art. 7º, II): quando a lei exige que guardemos ou informemos dados.</li>
+                </ul>
+                <p class="termos-text">Os relatórios anônimos não são considerados dados pessoais pela LGPD (art. 12), porque não permitem identificar ninguém.</p>
+            </div>
+
+            <div class="termos-section">
+                <div class="termos-section-header">
+                    <div class="termos-section-icon"><i class="fas fa-toggle-on"></i></div>
+                    <h2 class="termos-section-title">Como Desligar os Dados de Uso</h2>
+                </div>
+                <p class="termos-text">No app, vá em <strong>Perfil → Preferências → "Compartilhar dados de uso"</strong>. A opção vem ligada por padrão.</p>
+                <p class="termos-text">Quando você desliga, o app para de registrar e de enviar dados de uso e apaga os registros que ainda não tinham sido enviados. O app continua funcionando normalmente.</p>
+            </div>
+
+            <div class="termos-section">
+                <div class="termos-section-header">
+                    <div class="termos-section-icon"><i class="fas fa-share-alt"></i></div>
+                    <h2 class="termos-section-title">Com Quem Compartilhamos</h2>
+                </div>
+                <ul class="termos-list">
+                    <li>Empresas que nos ajudam a operar o serviço, como hospedagem, banco de dados e envio de notificações: <mark class="preencher">[PREENCHER — listar os fornecedores e se os dados são armazenados fora do Brasil]</mark>. Elas só podem usar os dados para prestar esse serviço ao PromoBeer.</li>
+                    <li>Google e Apple, quando você escolhe entrar com essas contas.</li>
+                    <li>Marcas, fabricantes e estabelecimentos recebem apenas relatórios agregados e anônimos, nunca dados individuais.</li>
+                    <li>Autoridades públicas, quando a lei ou uma ordem judicial exigir.</li>
+                </ul>
+            </div>
+
+            <div class="termos-section">
+                <div class="termos-section-header">
+                    <div class="termos-section-icon"><i class="fas fa-clock"></i></div>
+                    <h2 class="termos-section-title">Por Quanto Tempo Guardamos</h2>
+                </div>
+                <ul class="termos-list">
+                    <li>Dados da conta: enquanto a conta estiver ativa.</li>
+                    <li>Dados de uso individuais: <mark class="preencher">[PREENCHER — prazo a combinar com a equipe da API — sugestão: até 12 meses]</mark>. Depois disso, mantemos apenas os números agregados e anônimos.</li>
+                    <li>Ao excluir a conta, os dados de uso ligados a ela são <mark class="preencher">[PREENCHER — excluídos ou anonimizados — confirmar com a equipe da API]</mark>.</li>
+                    <li>Podemos guardar alguns dados por mais tempo quando a lei exigir.</li>
+                </ul>
+            </div>
+
+            <div class="termos-section">
+                <div class="termos-section-header">
+                    <div class="termos-section-icon"><i class="fas fa-user-check"></i></div>
+                    <h2 class="termos-section-title">Seus Direitos</h2>
+                </div>
+                <p class="termos-text">Pela LGPD (art. 18), você pode:</p>
+                <ul class="termos-list">
+                    <li>confirmar se temos dados seus e acessá-los;</li>
+                    <li>corrigir dados incompletos, errados ou desatualizados;</li>
+                    <li>pedir a anonimização, o bloqueio ou a exclusão de dados desnecessários;</li>
+                    <li>pedir a exclusão da sua conta e dos seus dados;</li>
+                    <li>saber com quem compartilhamos seus dados;</li>
+                    <li>revogar o consentimento, quando ele for a base do tratamento;</li>
+                    <li>se opor a um tratamento feito com base no legítimo interesse;</li>
+                    <li>pedir a portabilidade dos seus dados.</li>
+                </ul>
+                <h3 class="termos-subtitle">Como exercer</h3>
+                <ul class="termos-list">
+                    <li>Excluir a conta: no app, em <strong>Perfil → Conta</strong>. Se você entrou com a Apple, também revogamos o acesso concedido pela Apple.</li>
+                    <li>Desligar os dados de uso: no app, em <strong>Perfil → Preferências</strong>.</li>
+                    <li>Demais pedidos: pelo e-mail <mark class="preencher">[PREENCHER — e-mail de contato, ex.: contato@promobeerapp.com]</mark>.</li>
+                </ul>
+                <p class="termos-text">Você também pode reclamar à Autoridade Nacional de Proteção de Dados (ANPD).</p>
+            </div>
+
+            <div class="termos-section">
+                <div class="termos-section-header">
+                    <div class="termos-section-icon"><i class="fas fa-lock"></i></div>
+                    <h2 class="termos-section-title">Segurança</h2>
+                </div>
+                <p class="termos-text">Usamos medidas técnicas e organizacionais para proteger seus dados contra acesso não autorizado, perda ou uso indevido. Nenhum sistema é totalmente seguro, mas, se acontecer um incidente que possa trazer risco a você, vamos avisar você e a ANPD, como a lei exige.</p>
+            </div>
+
+            <div class="termos-section">
+                <div class="termos-section-header">
+                    <div class="termos-section-icon"><i class="fas fa-id-card"></i></div>
+                    <h2 class="termos-section-title">Maiores de 18 Anos</h2>
+                </div>
+                <p class="termos-text">O PromoBeer trata de bebidas alcoólicas e é destinado apenas a maiores de 18 anos. Não coletamos dados de menores de idade de propósito. Se soubermos que uma conta pertence a um menor, ela será excluída.</p>
+            </div>
+
+            <div class="termos-section">
+                <div class="termos-section-header">
+                    <div class="termos-section-icon"><i class="fas fa-sync-alt"></i></div>
+                    <h2 class="termos-section-title">Alterações nesta Política</h2>
+                </div>
+                <p class="termos-text">Podemos atualizar esta Política. Quando ela mudar, avisaremos no app e atualizaremos a data de "última atualização" no topo desta página.</p>
+            </div>
+
+            <div class="termos-section">
+                <div class="termos-section-header">
+                    <div class="termos-section-icon"><i class="fas fa-envelope"></i></div>
+                    <h2 class="termos-section-title">Contato e Encarregado de Dados</h2>
+                </div>
+                <ul class="termos-list">
+                    <li>Encarregado de dados (DPO): <mark class="preencher">[PREENCHER — nome]</mark></li>
+                    <li>E-mail do encarregado: <mark class="preencher">[PREENCHER — e-mail]</mark></li>
+                </ul>
+            </div>
+
+        </div>
+    </main>
+
+    <footer class="termos-footer">
+        <div class="container">
+            <p><a href="uso.html" style="color: inherit;">Termos de Uso</a> · <a href="privacidade.html" style="color: inherit;">Política de Privacidade</a></p>
+            <p>© 2026 PromoBeer Brasil. Todos os direitos reservados.</p>
+            <div class="termos-footer-social">
+                <a href="https://www.instagram.com/promobeer" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.facebook.com/Promobeer" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

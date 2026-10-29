@@ -137,6 +137,19 @@
             margin-top: 0.55rem;
         }
 
+        .termos-text {
+            font-family: var(--font-body);
+            font-size: 0.95rem;
+            color: var(--color-gray-500);
+            line-height: 1.7;
+        }
+
+        .termos-text a,
+        .termos-list a {
+            color: var(--color-secondary);
+            font-weight: 600;
+        }
+
         .termos-footer {
             background: var(--color-primary);
             padding: 2rem 0;
@@ -181,6 +194,7 @@
             <span class="termos-hero-tag">Legal</span>
             <h1 class="termos-hero-title">Termos de Uso</h1>
             <p class="termos-hero-meta">Ao utilizar o PromoBeer, você concorda com os termos descritos abaixo.</p>
+            <p class="termos-hero-meta">Última atualização: 28 de outubro de 2026</p>
         </div>
     </section>
 
@@ -194,7 +208,7 @@
                     <h2 class="termos-section-title">Termos Básicos</h2>
                 </div>
                 <ul class="termos-list">
-                    <li>O uso do serviço é permitido apenas para maiores de 18 anos.</li>
+                    <li>O PromoBeer trata de bebidas alcoólicas. O uso do serviço é permitido apenas para maiores de 18 anos. Ao criar uma conta ou usar o app como visitante, você declara ter 18 anos ou mais.</li>
                     <li>É proibido publicar conteúdo com violência, nudez, nudez parcial, discriminação, atos ilegais, transgressões, ódio, pornografia ou sexo.</li>
                     <li>Você é responsável pela sua conta. É proibido transferi-la ou vendê-la; as informações fornecidas devem ser precisas.</li>
                     <li>É proibido solicitar as credenciais de outros usuários.</li>
@@ -221,7 +235,7 @@
                 <ul class="termos-list">
                     <li>O PromoBeer se reserva o direito de modificar ou encerrar o serviço a qualquer momento, sem aviso prévio.</li>
                     <li>Todas as licenças concedidas ao usuário cessam imediatamente após o encerramento do serviço ou da conta.</li>
-                    <li>O PromoBeer pode alterar estes Termos de Uso com aviso prévio, exceto quando a alteração for exigida por motivos legais.</li>
+                    <li>O PromoBeer pode alterar estes Termos de Uso com aviso prévio, exceto quando a alteração for exigida por motivos legais. Quando os termos mudarem, avisaremos no app e atualizaremos a data de "última atualização" nesta página.</li>
                     <li>O PromoBeer se reserva o direito de recusar acesso ao serviço a qualquer usuário, a seu exclusivo critério.</li>
                     <li>O PromoBeer pode cancelar ou transferir nomes de usuário (usernames) conforme necessário.</li>
                     <li>O PromoBeer tem o direito discricionário de remover qualquer conteúdo publicado na plataforma.</li>
@@ -229,6 +243,58 @@
                     <li>O usuário é responsável por quaisquer cobranças de dados decorrentes do uso do serviço.</li>
                     <li>É proibido rastrear, fazer scraping ou armazenar em cache qualquer conteúdo do serviço sem autorização prévia.</li>
                 </ul>
+            </div>
+
+            <!-- Conta e acesso -->
+            <div class="termos-section">
+                <div class="termos-section-header">
+                    <div class="termos-section-icon"><i class="fas fa-user-lock"></i></div>
+                    <h2 class="termos-section-title">Conta e Acesso</h2>
+                </div>
+                <ul class="termos-list">
+                    <li>Você pode entrar no PromoBeer com e-mail e senha, com sua conta Google ou com seu Apple ID. Também é possível usar o app como visitante, sem criar conta.</li>
+                    <li>Ao entrar com Google ou Apple, você também está sujeito aos termos desses serviços. O PromoBeer não recebe a sua senha do Google nem da Apple.</li>
+                    <li>Se o e-mail verificado da sua conta Google ou Apple já estiver cadastrado no PromoBeer, as duas formas de login passam a dar acesso à mesma conta.</li>
+                    <li>Se você estava usando o app como visitante e cria uma conta ou faz login, os dados do visitante (como alertas e preferências) passam para a sua conta.</li>
+                    <li>Você pode excluir sua conta a qualquer momento no app, em Perfil → Conta. Se você entrou com a Apple, também revogamos o acesso que a Apple concedeu ao PromoBeer.</li>
+                </ul>
+            </div>
+
+            <!-- Publicação de promoções -->
+            <div class="termos-section">
+                <div class="termos-section-header">
+                    <div class="termos-section-icon"><i class="fas fa-tags"></i></div>
+                    <h2 class="termos-section-title">Publicação de Promoções</h2>
+                </div>
+                <ul class="termos-list">
+                    <li>Ao publicar uma promoção, informe o produto, o volume, o preço e o estabelecimento corretos. É proibido publicar promoções falsas ou enganosas.</li>
+                    <li>As promoções publicadas são públicas e podem ser vistas por qualquer pessoa que use o app.</li>
+                    <li>O PromoBeer pode revisar, editar, ocultar ou remover promoções que violem estes Termos, que pareçam incorretas ou que tenham expirado.</li>
+                    <li>O preço e a disponibilidade são definidos pelo estabelecimento. O PromoBeer não garante que a promoção ainda esteja valendo quando você chegar ao local.</li>
+                    <li>O histórico de promoções públicas pode ser usado para calcular o termômetro de preço, sem mostrar quem publicou cada promoção.</li>
+                </ul>
+            </div>
+
+            <!-- Alertas e termômetro -->
+            <div class="termos-section">
+                <div class="termos-section-header">
+                    <div class="termos-section-icon"><i class="fas fa-bell"></i></div>
+                    <h2 class="termos-section-title">Alertas de Preço e Termômetro</h2>
+                </div>
+                <ul class="termos-list">
+                    <li>Você pode criar alertas para um produto e um volume, com um preço máximo. Avisamos quando aparecer uma promoção dentro desse preço na cidade escolhida.</li>
+                    <li>Os alertas dependem das promoções publicadas na plataforma e das notificações do seu aparelho. Não garantimos que todas as promoções serão avisadas, nem o horário do aviso.</li>
+                    <li>O termômetro de preço compara o preço de uma promoção com promoções anteriores. Ele é apenas uma referência e não é uma recomendação de compra.</li>
+                </ul>
+            </div>
+
+            <!-- Privacidade -->
+            <div class="termos-section">
+                <div class="termos-section-header">
+                    <div class="termos-section-icon"><i class="fas fa-user-shield"></i></div>
+                    <h2 class="termos-section-title">Privacidade</h2>
+                </div>
+                <p class="termos-text">A forma como coletamos, usamos e protegemos seus dados, incluindo os dados de uso do app e os relatórios estatísticos que produzimos, está descrita na nossa <a href="privacidade.html">Política de Privacidade</a>. Ela faz parte destes Termos.</p>
             </div>
 
             <!-- Direitos -->
@@ -267,6 +333,7 @@
 
     <footer class="termos-footer">
         <div class="container">
+            <p><a href="uso.html" style="color: inherit;">Termos de Uso</a> · <a href="privacidade.html" style="color: inherit;">Política de Privacidade</a></p>
             <p>© 2026 PromoBeer Brasil. Todos os direitos reservados.</p>
             <div class="termos-footer-social">
                 <a href="https://www.instagram.com/promobeer" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
